@@ -1,6 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f0f4f8; /* Cor de fundo suave */
+    background-color: #f0f4f8;
     margin: 0;
     padding: 20px;
     display: flex;
@@ -10,100 +10,100 @@ body {
 }
 
 .container {
-    width: 450px; /* Largura da caixa do chatbot */
-    background: #ffffff; /* Fundo da caixa */
+    width: 450px;
+    background: #ffffff; 
     padding: 25px;
-    border-radius: 15px; /* Cantos arredondados */
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); /* Sombra para profundidade */
+    border-radius: 15px; 
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); 
 }
 
 h1 {
-    text-align: center; /* Centraliza o título */
-    color: #333; /* Cor do texto */
-    font-size: 1.8rem; /* Tamanho do texto do título */
-    margin-bottom: 20px; /* Espaçamento abaixo do título */
+    text-align: center; 
+    color: #333;
+    font-size: 1.8rem; 
+    margin-bottom: 20px; 
 }
 
 .messages {
-    height: 350px; /* Altura do chat */
-    overflow-y: auto; /* Adiciona rolagem vertical */
-    border: 1px solid #ccc; /* Borda do chat */
-    margin-bottom: 15px; /* Espaçamento abaixo do chat */
-    padding: 20px; /* Padding interno */
-    border-radius: 12px; /* Cantos arredondados */
-    background: #f9fafc; /* Cor de fundo das mensagens */
-    font-size: 15px; /* Tamanho do texto */
-    scroll-behavior: smooth; /* Rolagem suave */
+    height: 350px; 
+    overflow-y: auto;
+    border: 1px solid #ccc; 
+    margin-bottom: 15px; 
+    padding: 20px; 
+    border-radius: 12px;
+    background: #f9fafc; 
+    font-size: 15px; 
+    scroll-behavior: smooth; 
 }
 
 .input-area {
-    display: flex; /* Alinha os itens na mesma linha */
-    align-items: center; /* Alinhamento vertical */
+    display: flex; 
+    align-items: center; 
 }
 
 .coin-chatbot {
-    display: flex; /* Flexbox para alinhar inputs */
-    align-items: center; /* Alinha os inputs */
-    width: 100%; /* Para garantir que ocupe a largura disponível */
+    display: flex; 
+    align-items: center; 
+    width: 100%; 
 }
 
 input[type="text"] {
-    flex: 1; /* Para ocupar o espaço disponível */
-    padding: 12px; /* Espaçamento interno */
-    border: 2px solid #007bff; /* Cor da borda do campo */
-    border-radius: 5px; /* Cantos arredondados do campo */
-    margin-right: 10px; /* Espaçamento à direita do campo */
-    font-size: 14px; /* Tamanho do texto do campo */
-    outline: none; /* Remove o contorno padrão */
-    transition: border-color 0.3s ease; /* Transição suave da cor da borda */
+    flex: 1; 
+    padding: 12px; 
+    border: 2px solid #007bff; 
+    border-radius: 5px; 
+    margin-right: 10px; 
+    font-size: 14px; 
+    outline: none; 
+    transition: border-color 0.3s ease; 
 }
 
 input[type="text"]:focus {
-    border-color: #0056b3; /* Cor da borda ao focar */
+    border-color: #0056b3;
 }
 
 button {
-    padding: 12px 20px; /* Espaçamento interno do botão */
-    border: none; /* Sem borda */
-    border-radius: 5px; /* Cantos arredondados do botão */
-    background: #28a745; /* Cor de fundo do botão */
-    color: #fff; /* Cor do texto do botão */
-    font-size: 14px; /* Tamanho do texto do botão */
-    cursor: pointer; /* Cursor como ponteiro */
-    transition: background 0.3s, transform 0.2s; /* Transições suaves */
+    padding: 12px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    background: #28a745;
+    color: #fff; 
+    font-size: 14px; 
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
 }
 
 button:hover {
-    background: #218838; /* Cor de fundo ao passar o mouse */
-    transform: scale(1.05); /* Leve aumento ao passar o mouse */
+    background: #218838;
+    transform: scale(1.05); 
 }
 
 button:active {
-    transform: scale(1.02); /* Leve redução ao clicar */
+    transform: scale(1.02); 
 }
 
 .messages .user-message {
-    text-align: right; /* Alinha mensagens do usuário à direita */
-    color: #007bff; /* Cor da mensagem do usuário */
-    margin-bottom: 15px; /* Espaço entre mensagens */
-    padding: 8px; /* Espaçamento interno */
-    background-color: #d9edf7; /* Fundo da mensagem do usuário */
-    border-radius: 8px; /* Cantos arredondados */
-    display: inline-block; /* Para manter a forma da mensagem */
+    text-align: right; 
+    color: #007bff; 
+    margin-bottom: 15px; 
+    padding: 8px; 
+    background-color: #d9edf7; 
+    border-radius: 8px; 
+    display: inline-block; 
 }
 
 .messages .bot-message {
-    text-align: left; /* Alinha mensagens do bot à esquerda */
-    color: #333; /* Cor da mensagem do bot */
-    margin-bottom: 15px; /* Espaço entre mensagens */
-    padding: 8px; /* Espaçamento interno */
-    background-color: #e9ecef; /* Fundo da mensagem do bot */
-    border-radius: 8px; /* Cantos arredondados */
-    display: inline-block; /* Para manter a forma da mensagem */
+    text-align: left; 
+    color: #333; 
+    margin-bottom: 15px; 
+    padding: 8px; 
+    background-color: #e9ecef;
+    border-radius: 8px; 
+    display: inline-block; 
 }
 
 .error {
-    color: red; /* Cor de erro */
-    text-align: center; /* Centraliza mensagem de erro */
-    margin-bottom: 10px; /* Espaço abaixo */
+    color: red; 
+    text-align: center; 
+    margin-bottom: 10px; 
 }

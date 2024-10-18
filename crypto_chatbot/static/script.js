@@ -21,7 +21,7 @@ document.getElementById('chat-button').addEventListener('click', async () => {
                 messagesDiv.innerHTML += `<div><strong>Chatbot:</strong> Desculpe, não foi possível obter o preço do Bitcoin.</div>`;
             }
         } else if (lowerInput.includes('converter bitcoin para')) {
-            const currency = lowerInput.split('para')[1].trim().toUpperCase(); // Extrai a moeda solicitada
+            const currency = lowerInput.split('para')[1].trim().toUpperCase(); 
             const response = await fetch(`/api/convert?currency=${currency}`);
             const data = await response.json();
             if (data.price) {

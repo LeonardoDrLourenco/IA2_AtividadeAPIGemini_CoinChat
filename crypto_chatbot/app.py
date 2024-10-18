@@ -3,7 +3,7 @@ from flask import Flask, jsonify, render_template, redirect, url_for, request
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user
 
 app = Flask(__name__)
-app.secret_key = 'sua_chave_secreta_aqui'  # Mantenha essa chave em segredo
+app.secret_key = 'sua_chave_secreta_aqui' 
 
 login_manager = LoginManager()
 login_manager.init_app(app)
@@ -20,7 +20,6 @@ def load_user(user_id):
     return User(user_id)
 
 
-# Simulando um banco de dados de usuários
 users = {'admin': 'password123'}
 
 
@@ -40,7 +39,7 @@ def login():
             login_user(user)
             return redirect(url_for('home'))
         else:
-            return render_template('login.html', error='Credenciais inválidas')
+            return render_template('login.html', error='Usuário ou senha inválidos')
     return render_template('login.html')
 
 
@@ -68,7 +67,7 @@ def logout():
 def get_bitcoin_price():
     try:
         response = requests.get('https://api.gemini.com/v1/pubticker/btcusd')
-        response.raise_for_status()  # Levanta um erro se a resposta for um código de status 4xx ou 5xx
+        response.raise_for_status() 
         data = response.json()
         price_usd = float(data['last'])
         return jsonify({'price_usd': price_usd}), 200
@@ -79,7 +78,7 @@ def get_bitcoin_price():
 @app.route('/api/convert', methods=['GET'])
 @login_required
 def convert_currency():
-    target_currency = request.args.get('currency', 'EUR').upper()  # Moeda padrão: EUR
+    target_currency = request.args.get('currency', 'EUR').upper()
     try:
         response = requests.get(
             f'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies={target_currency}')
@@ -95,8 +94,6 @@ def convert_currency():
 @login_required
 def chat():
     user_message = request.json.get('message', '')
-
-    # Removido o código relacionado às novas moedas
 
     return jsonify({'response': "Desculpe, não entendi sua pergunta."})
 
